@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Proyecto Unidad I</title>
+      <link rel="stylesheet" href="./CSS/Estilo.css">
+      <script type="text/javascript" src="./JavaScript/app.js"></script>
+      <script type="text/javascript" src="./JavaScript/app_dis.js"></script>
+  </head>
+  <body>
+    <h2 id="Titulo">Proyecto de la Unidad I</h2><hr>
+    <div id="cuadros_formularios">
+      <div id="activo" class = "activo">
+        <br><center><h3 class="encabezado">Calcular el área<br>(Activado)</h3></center>
+          <p class="Val_base">Longitud de la base = <strong>5.6</strong></p>
+            <p class="Val_altura">Longitud del alto = <strong>2.8</strong></p><br>
+              <form class="datos_figura" action="index.html" method="post">
+                <ul>
+                  <li>
+                    <label for="Base">Base:</label>
+                      <input type="text" id="Base" name="Base" placeholder="Valor de la base de la figura" onkeypress="return validaNumericos(event)">
+                    </li><br>
+                    <li>
+                      <label for="Altura">Altura:</label>
+                        <input type="text" id="Altura" name="Altura"  placeholder="Valor de la altura de la figura" onkeypress = "return validaNumericos(event)">
+                      </li>
+                    </ul>
+                  </form>
+                  <center><button id="calcular" type="button" name="calcular" onclick="getData()">Calcular</button></center><hr>
+                  <p class="tag_area">Area: <strong><label id="val_area"></strong></label> </p>
+                  <p class="relacion">Cantidad de veces que cabe la figura en el área establecida:</p>
+                  <table class="tabla">
+                    <tr>
+                      <td>Horizontalmente</td>
+                      <td>Verticalmente</td>
+                      <td>Matematicamente</td>
+                    </tr>
+                    <tr>
+                      <td id="cant_hor"></td>
+                      <td id="cant_vert"></td>
+                      <td id="cant_mat"></td>
+                    </tr>
+                    </table>
+         </div>
+            <div id="desactivado" class="desactivado">
+              <br><center><h3 class="encabezado">Calcular el área<br>(Desactivado)</h3></center>
+                <p class="Val_base">Longitud de la base = <strong>5.6</strong></p>
+                  <p class="Val_altura">Longitud del alto = <strong>2.8</strong></p><br>
+                    <form class="datos_figura" action="index.html" method="post">
+                      <ul>
+                        <li>
+                          <label for="Base_dis">Base:</label>
+                            <input type="text_dis" id="Base_dis" name="Base_dis" placeholder="Valor de la base de la figura" onkeypress = "return validaNumericos(event)">
+                              </li><br>
+                                <li>
+                                  <label for="Altura">Altura:</label>
+                                  <input type="text" id="Altura_dis" name="Altura_dis"  placeholder="Valor de la altura de la figura" onkeypress = "return validaNumericos(event)">
+                                </li>
+                              </ul>
+                            </form>
+                            <center><button id="calcular" type="button" name="calcular" onclick="getData2()">Calcular</button></center><hr>
+                            <p class="tag_area">Area: <strong><label id="val_area"></strong></label> </p>
+                            <p class="relacion">Cantidad de veces que cabe la figura en el área establecida:</p>
+                            <table class="tabla">
+                              <tr>
+                                <td>Horizontalmente</td>
+                                <td>Verticalmente</td>
+                                <td>Matematicamente</td>
+                              </tr>
+                              <tr>
+                                <td id="cant_hor_dis"></td>
+                                <td id="cant_vert_dis"></td>
+                                <td id="cant_mat_dis"></td>
+                              </tr>
+                              </table>
+                          </div>
+
+        </div>
+          <div id="canvas" class="canvas">
+            <div class="representaciones">
+                <hr><p><strong>Representaciones gráficas</strong></p>
+            </div>
+            <div class="div_canvas_h">
+              <p class="encabezado_canv_h">Representación horizontal:</p>
+              <canvas id="canvas_hor" width="560" height="280" style="border: 1px solid #000000;"></canvas>
+            </div>
+            <div class="div_canvas_v">
+              <p class="encabezado_canv_v">Representación vertical:</p>
+              <canvas id="canvas_vert" width="560" height="280" style="border: 1px solid #000000;"></canvas>
+            </div>
+          </div>
+  </body>
+</html>

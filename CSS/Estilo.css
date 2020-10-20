@@ -1,0 +1,147 @@
+#cuadros_formularios
+{
+  margin:auto;
+}
+
+#activo
+{
+  margin: auto;
+  margin-right: 120px;
+  margin-top: 50px;
+  width: 400px;
+  height: 530px;
+  border: 2px solid #aaaaaa;
+  border-radius: 15px;
+}
+
+.activo
+{
+  float: right;
+}
+
+#desactivado
+{
+  margin: auto;
+  margin-left: 120px;
+  margin-top: 50px;
+  width: 400px;
+  height: 530px;
+  border: 2px solid #aaaaaa;
+  border-radius: 15px;
+}
+
+.desactivado
+{
+  float: left;
+}
+
+#Titulo
+{
+  font-family: "Calibri";
+  text-align: center;
+}
+
+.datos_figura
+{
+  font-family: "Calibri";
+  font-size: 17px;
+}
+
+.encabezado
+{
+  font-family: "Calibri";
+  font-size: 22px
+}
+
+.Val_base
+{
+  margin-left: 15px;
+  font-family: "Calibri";
+  font-size: 17px;
+}
+
+.Val_altura
+{
+  margin-left: 15px;
+  font-family: "Calibri";
+  font-size: 17px;
+}
+
+.tag_area
+{
+  margin-left: 15px;
+  font-family: "Calibri";
+  font-size: 17px;
+}
+
+.relacion
+{
+  margin-left: 15px;
+  font-family: "Calibri";
+  font-size: 17px;
+}
+
+table
+{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Calibri";
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+table td
+{
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+.table_area
+{
+  font-family: "Calibri";
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+
+.div_canvas_h
+{
+  float: right;
+  margin-right: 20px;
+}
+
+.div_canvas_v
+{
+  float: left;
+  margin-left: 20px;
+}
+
+.encabezado_canv_h
+{
+  font-family: "Calibri";
+  font-size: 17px;
+}
+
+.encabezado_canv_v
+{
+  font-family: "Calibri";
+  font-size: 17px;
+}
+
+.representaciones
+{
+  text-align: center;
+  margin-top: 600px;
+  font-family: "Calibri";
+  font-size: 20px;
+}
+
+#desactivado
+{
+  webkit-touch-callout: none;
+  webkit-user-select:none;
+  khtml-user-select:none;
+  moz-user-select:none;
+  ms-user-select:none;
+  user-select:none
+}
