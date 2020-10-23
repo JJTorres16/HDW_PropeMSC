@@ -6,23 +6,24 @@
       <link rel="stylesheet" href="./CSS/Estilo.css">
       <script type="text/javascript" src="./JavaScript/app.js"></script>
       <script type="text/javascript" src="./JavaScript/app_dis.js"></script>
+
   </head>
-  <body>
+  <body onload="Bienvenida()" onresize="CambiarTamaño()">
     <h2 id="Titulo">Proyecto de la Unidad I</h2><hr>
     <div id="cuadros_formularios">
       <div id="activo" class = "activo">
-        <br><center><h3 class="encabezado">Calcular el área<br>(Activado)</h3></center>
+        <br><center><h3 class="encabezado" onMouseOver = "TituloActivado()">Calcular el área<br>(Activado)</h3></center>
           <p class="Val_base">Longitud de la base = <strong>5.6</strong></p>
             <p class="Val_altura">Longitud del alto = <strong>2.8</strong></p><br>
               <form class="datos_figura" action="index.html" method="post">
                 <ul>
                   <li>
                     <label for="Base">Base:</label>
-                      <input type="text" id="Base" name="Base" placeholder="Valor de la base de la figura" onkeypress="return validaNumericos(event)">
+                      <input type="text" id="Base" name="Base" placeholder="Valor de la base de la figura" onkeypress="return validaNumericos(event)" required = "required" pattern="[0-9]+(.[1-9])?">
                     </li><br>
                     <li>
                       <label for="Altura">Altura:</label>
-                        <input type="text" id="Altura" name="Altura"  placeholder="Valor de la altura de la figura" onkeypress = "return validaNumericos(event)">
+                        <input type="text" id="Altura" name="Altura"  placeholder="Valor de la altura de la figura" onkeypress = "return validaNumericos(event)" required = "required" pattern="[0-9]+(.[1-9])?">
                       </li>
                     </ul>
                   </form>
@@ -42,24 +43,24 @@
                     </tr>
                     </table>
          </div>
-            <div id="desactivado" class="desactivado">
-              <br><center><h3 class="encabezado">Calcular el área<br>(Desactivado)</h3></center>
+            <div id="desactivado" class="desactivado" oncontextmenu="return false">
+              <br><center><h3 class="encabezado" onMouseOver = "TituloDesctivado()">Calcular el área<br>(Desactivado)</h3></center>
                 <p class="Val_base">Longitud de la base = <strong>5.6</strong></p>
                   <p class="Val_altura">Longitud del alto = <strong>2.8</strong></p><br>
                     <form class="datos_figura" action="index.html" method="post">
                       <ul>
                         <li>
                           <label for="Base_dis">Base:</label>
-                            <input type="text_dis" id="Base_dis" name="Base_dis" placeholder="Valor de la base de la figura" onkeypress = "return validaNumericos(event)">
+                            <input type="text_dis" id="Base_dis" name="Base_dis" placeholder="Valor de la base de la figura" onkeypress = "return validaNumericos(event)" required = "required" pattern="[0-9]+(.[1-9])?">
                               </li><br>
                                 <li>
                                   <label for="Altura">Altura:</label>
-                                  <input type="text" id="Altura_dis" name="Altura_dis"  placeholder="Valor de la altura de la figura" onkeypress = "return validaNumericos(event)">
+                                  <input type="text" id="Altura_dis" name="Altura_dis"  placeholder="Valor de la altura de la figura" onkeypress = "return validaNumericos(event)" required = "required" pattern="[0-9]+(.[1-9])?">
                                 </li>
                               </ul>
                             </form>
                             <center><button id="calcular" type="button" name="calcular" onclick="getData2()">Calcular</button></center><hr>
-                            <p class="tag_area">Area: <strong><label id="val_area"></strong></label> </p>
+                            <p class="tag_area">Area: <strong><label id="val_area_dis"></strong></label> </p>
                             <p class="relacion">Cantidad de veces que cabe la figura en el área establecida:</p>
                             <table class="tabla">
                               <tr>

@@ -1,6 +1,13 @@
 var getData2 = function(){
+
   var base_str = document.getElementById("Base_dis").value;
   var altura_str = document.getElementById("Altura_dis").value;
+
+  if (base_str == "" || altura_str == ""){
+      alert("Evento onClick \nFalta ingresar los datos");
+  }
+    else {
+      alert("Evento onClick \nSe harán los cálculos");
 
       if (base_str == "") {
         document.getElementById("Base_dis").focus();
@@ -30,7 +37,7 @@ var getData2 = function(){
       var altura_base = parseInt(2.8/base); // > 1 (1.1, 1.3)
       var cantidad_vertical = (base_altura*altura_base);
 
-      document.getElementById("val_area").innerHTML = area_new;
+      document.getElementById("val_area_dis").innerHTML = area_new.toFixed(3);
 
           if (cantidad_horizontal > 1 || cantidad_horizontal == 0){
               document.getElementById("cant_hor_dis").innerHTML = cantidad_horizontal + " veces";
@@ -89,4 +96,5 @@ var getData2 = function(){
         i = 0;
         e++;
     }
+  }  
 }

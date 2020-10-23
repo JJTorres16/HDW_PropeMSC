@@ -1,6 +1,13 @@
 var getData = function(){
+
   var base_str = document.getElementById("Base").value;
   var altura_str = document.getElementById("Altura").value;
+
+  if (base_str == "" || altura_str == ""){
+      alert("Evento onClick \nFalta ingresar los datos");
+  }
+    else {
+      alert("Evento onClick \nSe harán los cálculos");
 
       if (base_str == "") {
         document.getElementById("Base").focus();
@@ -14,8 +21,8 @@ var getData = function(){
           }
        }
 
-      var base = parseFloat(base_str);
-      var altura = parseFloat(altura_str);
+      var base = parseFloat(base_str).toFixed(1);
+      var altura = parseFloat(altura_str).toFixed(1);
       var area_new = base*altura;
       var area_orig = 5.6*2.8; //15.68
       var relacion_areas = area_orig/area_new;
@@ -30,7 +37,7 @@ var getData = function(){
       var altura_base = parseInt(2.8/base); // > 1 (1.1, 1.3)
       var cantidad_vertical = (base_altura*altura_base);
 
-      document.getElementById("val_area").innerHTML = area_new;
+      document.getElementById("val_area").innerHTML = area_new.toFixed(3);
 
           if (cantidad_horizontal > 1 || cantidad_horizontal == 0){
               document.getElementById("cant_hor").innerHTML = cantidad_horizontal + " veces";
@@ -89,6 +96,7 @@ var getData = function(){
         i = 0;
         e++;
     }
+  }
 }
 
 
@@ -96,6 +104,23 @@ function validaNumericos(event){
   if ((event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46){
     return true;
   } else {
+    alert("Evento onkeypress \nNo es un caracter permitido")
     return false;
   }
+}
+
+function Bienvenida(event){
+  alert("Evento onLoad \nBienvenidos a mi Proyecto de la UNIDAD 1");
+}
+
+function TituloActivado(event){
+  alert("Evento onMouseOver \nEsto si lo puedes seleccionar.");
+}
+
+function TituloDesctivado(event){
+  alert("Evento onMouseOver \nEsto no lo puedes seleccionar.");
+}
+
+function CambiarTamaño(event){
+  alert("Evento onresize \nTodo se desconfiguró.");
 }
